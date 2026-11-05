@@ -1,7 +1,10 @@
-﻿namespace CampusPlacementManagement.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CampusPlacementManagement.Models
 {
     public class ApplicationUser
     {
+        [Key]
         public int UserId { get; set; }
 
         public string FullName { get; set; } = string.Empty;
