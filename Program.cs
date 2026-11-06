@@ -1,13 +1,15 @@
-using System.Text;
 using CampusPlacementManagement.Data;
 using CampusPlacementManagement.Repositories;
+using CampusPlacementManagement.Repositories.Implementations;
 using CampusPlacementManagement.Repositories.Interfaces;
 using CampusPlacementManagement.Services;
+using CampusPlacementManagement.Services.Implementations;
 using CampusPlacementManagement.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CampusPlacementManagement
@@ -84,6 +86,13 @@ namespace CampusPlacementManagement
 
             builder.Services.AddScoped<ICollegeRepository, CollegeRepository>();
             builder.Services.AddScoped<ICollegeService, CollegeService>();
+
+            builder.Services.AddScoped<IPlacementOfficerRepository,
+    PlacementOfficerRepository>();
+
+            builder.Services.AddScoped<
+                IPlacementOfficerService,
+                PlacementOfficerService>();
 
             var app = builder.Build();
 
