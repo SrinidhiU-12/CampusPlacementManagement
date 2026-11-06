@@ -87,12 +87,11 @@ namespace CampusPlacementManagement
             builder.Services.AddScoped<ICollegeRepository, CollegeRepository>();
             builder.Services.AddScoped<ICollegeService, CollegeService>();
 
-            builder.Services.AddScoped<IPlacementOfficerRepository,
-    PlacementOfficerRepository>();
+            builder.Services.AddScoped<IPlacementOfficerRepository,PlacementOfficerRepository>();
+            builder.Services.AddScoped<IPlacementOfficerService,PlacementOfficerService>();
 
-            builder.Services.AddScoped<
-                IPlacementOfficerService,
-                PlacementOfficerService>();
+            builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+            builder.Services.AddScoped<ICompanyService, CompanyService>();
 
             var app = builder.Build();
 

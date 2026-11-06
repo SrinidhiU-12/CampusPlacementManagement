@@ -12,7 +12,8 @@ namespace CampusPlacementManagement.Data
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<College> Colleges => Set<College>();
         public DbSet<PlacementOfficer> PlacementOfficers { get; set; }
-        
+
+        public DbSet<Company> Companies { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
