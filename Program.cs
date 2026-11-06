@@ -82,6 +82,9 @@ namespace CampusPlacementManagement
 
             builder.Services.AddScoped<PasswordService>();
 
+            builder.Services.AddScoped<ICollegeRepository, CollegeRepository>();
+            builder.Services.AddScoped<ICollegeService, CollegeService>();
+
             var app = builder.Build();
 
             await DbInitializer.InitializeAsync(
